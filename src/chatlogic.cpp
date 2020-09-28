@@ -22,6 +22,7 @@ ChatLogic::ChatLogic()
 
     // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
     _chatBot->SetChatLogicHandle(this);
+    
 
     ////
     //// EOF STUDENT CODE

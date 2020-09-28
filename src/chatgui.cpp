@@ -116,6 +116,7 @@ ChatBotPanelDialog::ChatBotPanelDialog(wxWindow *parent, wxWindowID id)
 
     //// STUDENT CODE
     ////
+    
 
     // create chat logic instance
     _chatLogic = new ChatLogic(); 
@@ -135,7 +136,12 @@ ChatBotPanelDialog::~ChatBotPanelDialog()
     //// STUDENT CODE
     ////
 
-    delete _chatLogic;
+    std::cout << "ChatBotPanelDialog Destructor" << std::endl;
+    if (_chatLogic) {
+        delete _chatLogic;
+    }
+
+    // delete _chatLogic;
 
     ////
     //// EOF STUDENT CODE
