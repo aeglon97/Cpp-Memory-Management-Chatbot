@@ -30,13 +30,22 @@ public:
     //// STUDENT CODE
     ////
 
+    //copy semantics
+    ChatBot(const ChatBot &source);
+    ChatBot &operator=(const ChatBot &source);
+
+    //move semantics
+    ChatBot(ChatBot &&source);
+    ChatBot &operator=(ChatBot &&source);
+
     ////
     //// EOF STUDENT CODE
 
-    // getters / setters
+    // mutators
     void SetCurrentNode(GraphNode *node);
     void SetRootNode(GraphNode *rootNode) { _rootNode = rootNode; }
     void SetChatLogicHandle(ChatLogic *chatLogic) { _chatLogic = chatLogic; }
+    void SetImageHandle(wxBitmap *image) { _image = image; }
     wxBitmap *GetImageHandle() { return _image; }
 
     // communication
